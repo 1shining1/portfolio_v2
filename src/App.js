@@ -1,25 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import ColorTheme from "./components/ColorTheme";
+import Sns from "./components/Sns";
+
+import { Link } from "react-router-dom";
+import Location from "./routes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        function handleResize() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+        }
+
+        // Add event listener on component mount
+        window.addEventListener("resize", handleResize);
+
+        // Remove event listener on component unmount
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        // Simulate a delay for demonstration purposes
+        const delay = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+
+        // Clear the delay on unmount
+        return () => clearTimeout(delay);
+    }, []);
+
+    return (
+        <>
+            {loading ? (
+                <div className="loading">
+                    <h1>
+                        Cheonga
+                        <br /> Yun
+                    </h1>
+                </div>
+            ) : (
+                <div className="container">
+                    <div className="inner">
+                        <div className="header">
+                            <div className="logo">
+                                <h1>
+                                    Cheonga
+                                    <br /> Yun
+                                </h1>
+                            </div>
+                            <ColorTheme />
+                        </div>
+
+                        <div id="nav">
+                            <ul>
+                                <li>
+                                    <Link to={`/`}>Home</Link>
+                                </li>
+                                <li>
+                                    <Link to={`/about`}>About</Link>
+                                </li>
+                                <li>
+                                    <Link to={`/projects`}>Projects</Link>
+                                </li>
+                                <li>
+                                    <Link to={`/contact`}>Contact</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <Location />
+                        <Sns />
+                    </div>
+                    <div className="bg-wrap">
+                        <span className="c1"></span>
+                        <span className="c2"></span>
+                        <span className="c3"></span>
+                        <span className="c4"></span>
+                    </div>
+                </div>
+            )}
+        </>
+    );
 }
 
 export default App;
