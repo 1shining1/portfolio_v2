@@ -1,0 +1,62 @@
+import React from "react";
+// import { Link } from "react-router-dom";
+import Lists from "../components/ProjectDetail";
+
+import { workLists } from "../constants/index";
+
+const Projects = () => {
+    return (
+        <div id="projects" className="content">
+            <h1 className="content-title">Projects</h1>
+            <div>
+                {/* <ul>
+                    <li>
+                        <Link to={`/project_detail/`}>Project Detail</Link>
+                    </li>
+                </ul> */}
+                {/* <TestResult /> */}
+                <div>
+                    {workLists.map((workList, index) => (
+                        <Lists
+                            key={`workList-${index}`}
+                            index={index}
+                            {...workList}
+                        />
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// const TestResult = ({ index, name, description, tags, image }) => {
+//     return (
+//         <div variants={index} className="imgWrap">
+//             <img src={image} alt="img" />
+//             <div className="txtWrap">
+//                 <h2>{name}</h2>
+//                 <p>{description}</p>
+//             </div>
+//         </div>
+//     );
+// };
+
+// function Test({ index, name }) {
+//     return (
+//         <div variants={index}>
+//             <h2>{name}</h2>
+//             {/* <Link to={`/project_detail/${index}`}>detail</Link> */}
+//         </div>
+//     );
+// }
+// const TestResult = () => {
+//     return (
+//         <>
+//             {workLists.map((workList, index) => (
+//                 <Lists key={`workList-${index}`} index={index} {...workList} />
+//             ))}
+//         </>
+//     );
+// };
+
+export default Projects;

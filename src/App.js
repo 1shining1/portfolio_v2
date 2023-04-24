@@ -72,12 +72,12 @@ function App() {
                         <Location />
                         <Sns />
                     </div>
-                    <div className="bg-wrap">
+                    {/* <div className="bg-wrap">
                         <span className="c1"></span>
                         <span className="c2"></span>
                         <span className="c3"></span>
                         <span className="c4"></span>
-                    </div>
+                    </div> */}
                 </div>
             )}
         </>

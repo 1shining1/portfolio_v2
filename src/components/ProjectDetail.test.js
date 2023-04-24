@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+// import { useParams } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import works from "../constants/index";
+import { work02 } from "../constants/index";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
@@ -36,7 +37,7 @@ const Work = () => {
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    {works.map((work, index) => (
+                    {work02.map((work, index) => (
                         <SwiperSlide>
                             <Slider
                                 key={`work-${index}`}

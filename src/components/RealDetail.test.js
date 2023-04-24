@@ -1,29 +1,35 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useParams } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import works from "../constants/index";
+import { work02 } from "../constants/index";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-const Slider = ({ index, name, description, tags, image }) => {
-    return (
-        <div variants={index} className="imgWrap">
-            <img src={image} alt="img" />
-            <div className="txtWrap">
-                <h2>{name}</h2>
-                <p>{description}</p>
-            </div>
-        </div>
-    );
-};
+// const { index } = useParams();
 
-const Work = () => {
+function Detail() {
+    // const [loading, setLoading] = useState(true);
+
+    const Slider = ({ index, name, description, tags, image }) => {
+        return (
+            <div variants={index} className="imgWrap">
+                <img src={image} alt="img" />
+                <div className="txtWrap">
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <>
+            <h1>Detail</h1>
             <div id="SwiperWrap">
                 <Swiper
                     slidesPerView={1}
@@ -36,7 +42,7 @@ const Work = () => {
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    {works.map((work, index) => (
+                    {work02.map((work, index) => (
                         <SwiperSlide>
                             <Slider
                                 key={`work-${index}`}
@@ -49,6 +55,6 @@ const Work = () => {
             </div>
         </>
     );
-};
+}
 
-export default Work;
+export default Detail;

@@ -10,7 +10,6 @@ const Home = () => {
                     solid experience in building complex applications with
                     clean, efficient code.
                 </p>
-                {/* <img src="../assets/projects/mockup-smartHP.png" alt="img" /> */}
             </div>
         </div>
     );
