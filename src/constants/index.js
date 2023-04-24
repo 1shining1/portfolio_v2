@@ -16,7 +16,7 @@ const workLists = [
         content: [
             {
                 name: "content!!!!!",
-                image: "https://source.unsplash.com/featured/300x201",
+                image: smartHP,
                 source_code_link: "https://github.com/",
             },
             {
@@ -33,6 +33,18 @@ const workLists = [
         description: "test2",
         link: "/project_detail/1",
         image: "https://source.unsplash.com/featured/300x202",
+        content: [
+            {
+                name: "content!!!!!",
+                image: mySeverance,
+                source_code_link: "https://github.com/",
+            },
+            {
+                name: "content!!!!!",
+                image: "https://source.unsplash.com/featured/300x205",
+                source_code_link: "https://github.com/",
+            },
+        ],
     },
 ];
 

@@ -12,13 +12,22 @@ const Location = () => {
         <>
             <Routes>
                 <Route path="/hello" element={<h1>Hello</h1>}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="/projects" element={<Projects />}></Route>
                 <Route
-                    path="/project_detail/:id/"
+                    path={`${process.env.PUBLIC_URL}/about`}
+                    element={<About />}
+                ></Route>
+                <Route
+                    path={`${process.env.PUBLIC_URL}/projects`}
+                    element={<Projects />}
+                ></Route>
+                <Route
+                    path={`${process.env.PUBLIC_URL}/project_detail/:index/`}
                     element={<RealDetail />}
                 ></Route>
-                <Route path="/contact" element={<Contact />}></Route>
+                <Route
+                    path={`${process.env.PUBLIC_URL}/contact`}
+                    element={<Contact />}
+                ></Route>
 
                 <Route
                     path={`${process.env.PUBLIC_URL}/`}

@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,7 +9,14 @@ import { workLists } from "../constants/index";
 
 import { Pagination, Navigation } from "swiper";
 
-function Detail(content) {
+function Detail() {
+    const params = Number(Object.values(useParams()));
+
+    useEffect(() => {
+        console.log("params: ", params);
+        console.log(typeof params);
+    }, [params]);
+
     // const { content } = props.location.state;
 
     // const cont = Object.keys(content).map((key) => [key, content[key]]);
@@ -41,10 +49,10 @@ function Detail(content) {
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    {workLists[0].content.map((work, index) => (
-                        <SwiperSlide>
+                    {workLists[params].content.map((work, index) => (
+                        <SwiperSlide key={`work-${index}`}>
                             <Slider
-                                key={`work-${index}`}
+                                // key={`work-${index}`}
                                 index={index}
                                 {...work}
                             />
