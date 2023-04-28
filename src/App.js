@@ -56,28 +56,34 @@ function App() {
                         <div id="nav">
                             <ul>
                                 <li>
-                                    <Link to={`/`}>Home</Link>
+                                    <Link to={`/portfolio_v2/`}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to={`/about`}>About</Link>
+                                    <Link to={`/portfolio_v2/about`}>
+                                        About
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to={`/projects`}>Projects</Link>
+                                    <Link to={`/portfolio_v2/projects`}>
+                                        Projects
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to={`/contact`}>Contact</Link>
+                                    <Link to={`/portfolio_v2/contact`}>
+                                        Contact
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                         <Location />
                         <Sns />
                     </div>
-                    {/* <div className="bg-wrap">
+                    <div className="bg-wrap">
                         <span className="c1"></span>
                         <span className="c2"></span>
                         <span className="c3"></span>
                         <span className="c4"></span>
-                    </div> */}
+                    </div>
                 </div>
             )}
         </>

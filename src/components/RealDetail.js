@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,6 +11,7 @@ import { Pagination, Navigation } from "swiper";
 
 function Detail() {
     const params = Number(Object.values(useParams()));
+    const navigate = useNavigate();
 
     useEffect(() => {
         console.log("params: ", params);
@@ -26,17 +27,23 @@ function Detail() {
             <div variants={index} className="imgWrap">
                 <img src={image} alt="img" />
                 <div className="txtWrap">
-                    <h2>{name}</h2>
+                    <p>{name}</p>
                 </div>
             </div>
         );
     };
 
-    // const [loading, setLoading] = useState(true);
-
     return (
-        <>
-            <h1>Detail</h1>
+        <div id="projectDetail" className="content">
+            {/* <h1 className="content-title">Detail</h1> */}
+            <button
+                onClick={() => {
+                    navigate(-1);
+                }}
+                className="backBtn"
+            >
+                ◀ go back to Project list
+            </button>
             <div id="SwiperWrap">
                 <Swiper
                     slidesPerView={1}
@@ -60,7 +67,7 @@ function Detail() {
                     ))}
                 </Swiper>
             </div>
-        </>
+        </div>
     );
 }
 

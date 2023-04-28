@@ -11,21 +11,18 @@ const Location = () => {
     return (
         <>
             <Routes>
-                <Route path="/hello" element={<h1>Hello</h1>}></Route>
+                <Route path="/portfolio_v2/" element={<Home />}></Route>
+                <Route path="/portfolio_v2/about" element={<About />}></Route>
                 <Route
-                    path={`${process.env.PUBLIC_URL}/about`}
-                    element={<About />}
-                ></Route>
-                <Route
-                    path={`${process.env.PUBLIC_URL}/projects`}
+                    path="/portfolio_v2/projects"
                     element={<Projects />}
                 ></Route>
                 <Route
-                    path={`${process.env.PUBLIC_URL}/project_detail/:index/`}
+                    path="/portfolio_v2/project_detail/:id/"
                     element={<RealDetail />}
                 ></Route>
                 <Route
-                    path={`${process.env.PUBLIC_URL}/contact`}
+                    path="/portfolio_v2/contact"
                     element={<Contact />}
                 ></Route>
 
