@@ -15,10 +15,21 @@ import asanLymph from "../assets/p02/asanLymph.png";
 import pohangF01 from "../assets/p03/pohang-foreign-main.png";
 import pohangF02 from "../assets/p03/pohang-foreign-mobile.png";
 
+// Affiliated organizations of the City Hall
+import Trauma from "../assets/p04/trauma.JPG";
+import Atech from "../assets/p04/atech.JPG";
+import Nt from "../assets/p04/nt.png";
+import Scholarship from "../assets/p04/scholarship.JPG";
+
 // Korea Employment and Labor Educational Institute
 import keliMain from "../assets/p05/keli_main.JPG";
 import keliMobile from "../assets/p05/keli_mobile.png";
 import keliCourse from "../assets/p05/keli_course.png";
+
+// Daegu Metropolitan Transit Corporation
+import Dtro from "../assets/p06/dtro01.png";
+import Dtro02 from "../assets/p06/dtro02.png";
+import SeoguMain from "../assets/p06/seogu_main.png";
 
 const workLists = [
     {
@@ -27,7 +38,9 @@ const workLists = [
         image: handong01,
         content: [
             {
-                name: "content!!!!!",
+                name: "Handong Global University's attendance system",
+                description:
+                    "Mobile application and web pages for Handong Global University's attendance system",
                 image: handong01,
             },
             {
@@ -105,6 +118,48 @@ const workLists = [
             {
                 name: "content!!!!!",
                 image: keliCourse,
+            },
+        ],
+    },
+    {
+        name: "Affiliated organizations of the Pohang City Hall",
+
+        image: Trauma,
+        content: [
+            {
+                name: "Pohang city's Earthquake Trauma Center",
+                image: Trauma,
+                description:
+                    "Created a responsive landing pages, maintained 1000+ web pages and graphics and passed the annual Web Accessibility test.",
+            },
+            {
+                name: "Pohang city's Agricultural Technology Center",
+                image: Atech,
+            },
+            {
+                name: "content!!!!!",
+                image: Nt,
+            },
+            {
+                name: "Pohang city's Scholarship Department",
+                image: Scholarship,
+            },
+        ],
+    },
+    {
+        name: "Daegu Metropolitan Transit Corporation",
+
+        image: Dtro,
+        content: [
+            {
+                name: "Daegu Metropolitan Transit Corporation",
+                image: Dtro,
+                description:
+                    "Created a responsive landing pages and passed the annual Web Accessibility test for Daegu Metropolitan Transit Corporation.",
+            },
+            {
+                name: "Daegu Metropolitan Transit Corporation",
+                image: Dtro02,
             },
         ],
     },

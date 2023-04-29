@@ -27,7 +27,8 @@ function Detail() {
             <div variants={index} className="imgWrap">
                 <img src={image} alt="img" />
                 <div className="txtWrap">
-                    <p>{name}</p>
+                    <h3>{name}</h3>
+                    <p>{description}</p>
                 </div>
             </div>
         );

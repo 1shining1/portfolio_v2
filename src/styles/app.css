@@ -196,7 +196,7 @@ body {
     transform: perspective(1px) translateZ(0);
     color: rgba(var(--text-color), 0.8);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    overflow: hidden;
+    /* overflow: hidden; */
     text-decoration: none;
     font-family: "Inter", sans-serif;
 }
@@ -207,7 +207,7 @@ body {
     z-index: -1;
     left: 0;
     right: 100%;
-    bottom: 0;
+    top: 62%;
     background: #c0a380;
     height: 4px;
     -webkit-transition-property: right;
