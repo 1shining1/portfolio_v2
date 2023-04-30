@@ -1,6 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import Lists from "../components/ProjectDetail";
+import Lists from "../components/ProjectList";
 
 import { workLists } from "../constants/index";
 

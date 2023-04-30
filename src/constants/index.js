@@ -42,6 +42,22 @@ const workLists = [
                 description:
                     "Mobile application and web pages for Handong Global University's attendance system",
                 image: handong01,
+                skill: "HTML /  CSS / JAVASCRIPT",
+                // skill: ["HTML", "CSS", "JavaScript"],
+                // tags: [
+                //     {
+                //         name: "HTML",
+                //         color: "blue-text-gradient",
+                //     },
+                //     {
+                //         name: "CSS",
+                //         color: "green-text-gradient",
+                //     },
+                //     {
+                //         name: "JavaScript",
+                //         color: "pink-text-gradient",
+                //     },
+                // ],
             },
             {
                 name: "content!!!!!",
@@ -67,13 +83,15 @@ const workLists = [
     },
 
     {
-        name: "Hospitals",
-        description: "Hospitals",
+        name: "Hospital Management System",
+
         image: smartHP,
         content: [
             {
-                name: "content!!!!!",
+                name: "Hospital Management System",
                 image: smartHP,
+                description:
+                    "Developed frontend for a Hospital Payment and Management System that allowed patients to make credit card payments for medical expenses, issue queue tickets, and receive medical certificates through a self-service kiosk and mobile app.",
             },
             {
                 name: "content!!!!!",
@@ -86,7 +104,7 @@ const workLists = [
         ],
     },
     {
-        name: "Four foreign language version of Pohang City Hall",
+        name: "Foreign language versions of Pohang City Hall",
         description:
             "Development and Maintenance of Responsive Website for Pohang City",
         image: pohangF01,

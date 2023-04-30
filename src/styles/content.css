@@ -70,11 +70,12 @@
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    border-radius: 3px;
-    box-shadow: 0 1.4px 1.7px rgba(0, 0, 0, 0.017),
+    border-radius: 10px;
+    border: 1px solid #000;
+    /* box-shadow: 0 1.4px 1.7px rgba(0, 0, 0, 0.017),
         0 3.3px 4px rgba(0, 0, 0, 0.024), 0 6.3px 7.5px rgba(0, 0, 0, 0.03),
         0 11.2px 13.4px rgba(0, 0, 0, 0.036),
-        0 20.9px 25.1px rgba(0, 0, 0, 0.043), 0 50px 60px rgba(0, 0, 0, 0.06);
+        0 20.9px 25.1px rgba(0, 0, 0, 0.043), 0 50px 60px rgba(0, 0, 0, 0.06); */
 }
 
 #projects .listItem > a:before {
@@ -149,9 +150,19 @@
 /* Project detail page */
 #projectDetail .backBtn {
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 0;
-    color: rgb(var(--text-color));
+    width: 220px;
+    height: 40px;
+    background-color: rgb(var(--text-color));
+    color: rgb(var(--background-color));
+    border-radius: 20px;
+    z-index: 30;
+    transition: all 0.3s ease-in-out;
+}
+
+#projectDetail .backBtn:hover {
+    width: 280px;
 }
 
 #SwiperWrap {
@@ -204,31 +215,71 @@
     /* flex: 1 1 0; */
     /* top: 50%; */
     /* transform: translate(0%, -70%); */
-    color: rgb(var(--text-color));
     text-shadow: 3px 4px 5px rgb(var(--background-color));
-    text-align: center;
+    text-align: left;
     z-index: 20;
 }
+
+/* body.dark #SwiperWrap .swiper-slide .txtWrap {
+    background: rgba(var(--background-color), 0.8);
+} */
 
 #SwiperWrap .swiper-slide .txtWrap h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: rgb(var(--text-color));
 }
 
 #SwiperWrap .swiper-slide .txtWrap p {
     font-size: 1.4rem;
+    color: rgba(var(--text-color), 0.7);
+}
+
+#SwiperWrap .swiper-slide .txtWrap span {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 4px 20px;
+    background: rgba(var(--body-color), 0.6);
+    border: 1px solid rgb(var(--text-color));
+    border-radius: 20px;
+    font-size: 0.8rem;
+    line-height: 1;
 }
 
 #SwiperWrap .swiper-button-next:after,
 #SwiperWrap .swiper-button-prev:after {
-    color: rgb(160, 44, 15);
+    color: rgba(var(--text-color), 0.8);
 }
 #SwiperWrap .swiper-button-prev:after {
     margin-right: -15px;
 }
 
+#SwiperWrap .swiper-pagination-bullet {
+    background: rgba(var(--text-color), 0.7);
+}
+
 #SwiperWrap .swiper-pagination-bullet-active {
-    background: rgb(181, 130, 21);
+    position: relative;
+    background: rgb(var(--text-color));
+    /* opacity: 1; */
+}
+
+#SwiperWrap .swiper-pagination-bullet-active::after {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(var(--text-color));
+    border-radius: 50%;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 8px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -251,3 +302,158 @@
         height: auto;
     }
 }
+
+/* project list test */
+#test_project_list {
+    display: flex;
+    flex-flow: row space-between;
+}
+
+#test_project_list .textBox {
+    flex: 1 1 0;
+}
+
+#test_project_list .list {
+    flex: 2 1 0;
+}
+
+#test_project_list .textBox span {
+    display: inline-block;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+}
+
+/* #test_project_list .textBox span:first-child {
+    width: 250px;
+    height: 250px;
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(var(--body-color), 1);
+    line-height: 250px;
+}
+
+#test_project_list .textBox span:nth-child(2) {
+    width: 250px;
+    height: 250px;
+    border-color: rgba(var(--body-color), 1);
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 250px;
+} */
+
+#test_project_list .listItem a {
+    text-decoration: none;
+    line-height: 1.1;
+}
+
+#test_project_list .listItem .num {
+    color: rgba(212, 33, 96, 0.1);
+    font-size: 3.8rem;
+    font-weight: 900;
+}
+
+/*  */
+#test_project_list .listItem .title {
+    display: inline-block;
+    margin-left: -20px;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(
+        to right,
+        rgba(212, 33, 96, 1),
+        rgba(212, 33, 96, 1) 50%,
+        rgba(var(--text-color), 0.8) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    font-size: 1.6rem;
+}
+
+#test_project_list .listItem .title:before {
+    content: "";
+    background: rgba(212, 33, 96, 1);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+#test_project_list .listItem .title:hover {
+    background-position: 0;
+}
+
+#test_project_list .listItem .title:hover::before {
+    width: 100%;
+}
+
+/* Presentational Styles */
+/* body {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+    place-items: center;
+  } */
+
+/* 
+#test_project_list a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+#test_project_list a:before,
+#test_project_list a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+#test_project_list a:before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+#test_project_list a:after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+}
+
+#test_project_list ahover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+#test_project_list a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+#test_project_list a span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#test_project_list a:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+#test_project_list a {
+    text-decoration: none;
+    color: #18272f;
+    font-weight: 700;
+    vertical-align: top;
+} */

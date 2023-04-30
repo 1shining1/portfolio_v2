@@ -73,6 +73,11 @@ function App() {
                                         Contact
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link to={`/portfolio_v2/test`}>
+                                        list test
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                         <Location />

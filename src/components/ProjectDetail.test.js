@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,21 +10,26 @@ import { work02 } from "../constants/index";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-const Slider = ({ index, name, description, tags, image }) => {
-    return (
-        <div variants={index} className="imgWrap">
-            <img src={image} alt="img" />
-            <div className="txtWrap">
-                <h2>{name}</h2>
-                <p>{description}</p>
-            </div>
-        </div>
-    );
-};
+// const { index } = useParams();
 
-const Work = () => {
+function Detail() {
+    // const [loading, setLoading] = useState(true);
+
+    const Slider = ({ index, name, description, tags, image }) => {
+        return (
+            <div variants={index} className="imgWrap">
+                <img src={image} alt="img" />
+                <div className="txtWrap">
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <>
+            <h1>Detail</h1>
             <div id="SwiperWrap">
                 <Swiper
                     slidesPerView={1}
@@ -50,6 +55,6 @@ const Work = () => {
             </div>
         </>
     );
-};
+}
 
-export default Work;
+export default Detail;

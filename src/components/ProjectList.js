@@ -1,0 +1,20 @@
+import { Link } from "react-router-dom";
+
+const Lists = ({ index, name, image }) => {
+    return (
+        // <div variants={index}>
+        <div className="listItem">
+            <Link
+                to={{
+                    pathname: `/portfolio_v2/project_detail/${index}`,
+                }}
+            >
+                <img src={image} alt="img" className="list_img" />
+                <span className="list_txt">READ MORE</span>
+            </Link>
+            <p className="list_title">{name}</p>
+        </div>
+    );
+};
+
+export default Lists;

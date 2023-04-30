@@ -1,30 +1,76 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-// import Detail from "../components/RealDetail";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import { useEffect } from "react";
+import { workLists } from "../constants/index";
 
-const Lists = ({ index, name, image, content }) => {
+import { Pagination, Navigation } from "swiper";
+
+function Detail() {
+    const params = Number(Object.values(useParams()));
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        console.log("params: ", params);
+        console.log(typeof params);
+    }, [params]);
+
+    // const { content } = props.location.state;
+
+    // const cont = Object.keys(content).map((key) => [key, content[key]]);
+    // const cont = Object.entries(content);
+    const Slider = ({ index, name, description, skill, image }) => {
+        return (
+            <div variants={index} className="imgWrap">
+                <img src={image} alt="img" />
+                <div className="txtWrap">
+                    <h3>{name}</h3>
+                    <p>{description}</p>
+                    <span>{skill}</span>
+                </div>
+            </div>
+        );
+    };
+
     return (
-        // <div variants={index}>
-        <div className="listItem">
-            <Link
-                to={{
-                    pathname: `/portfolio_v2/project_detail/${index}`,
-                    state: { content },
+        <div id="projectDetail" className="content">
+            {/* <h1 className="content-title">Detail</h1> */}
+            <button
+                onClick={() => {
+                    navigate(-1);
                 }}
+                className="backBtn"
             >
-                <img src={image} alt="img" className="list_img" />
-                <span className="list_txt">MORE</span>
-            </Link>
-            <p className="list_title">{name}</p>
+                ◀ go back to Project List
+            </button>
+            <div id="SwiperWrap">
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={30}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                    {workLists[params].content.map((work, index) => (
+                        <SwiperSlide key={`work-${index}`}>
+                            <Slider
+                                // key={`work-${index}`}
+                                index={index}
+                                {...work}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </div>
     );
-};
+}
 
-export default Lists;
+export default Detail;

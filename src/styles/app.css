@@ -6,19 +6,6 @@
     --vh: calc(var(--vh, 1vh) * 1);
 }
 
-/* :root {
-    --c-bg: hsl(0, 0%, 90%);
-    --c-text: hsl(0, 0%, 10%);
-    --pad: max(20px, 4vmin);
-} */
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --c-bg: hsl(0, 0%, 5%);
-        --c-text: hsl(0, 0%, 95%);
-    }
-} */
-
 body.light {
     --background-color: 216, 203, 187; /* #d8cbbb */
     --text-color: 42, 50, 46; /* #2a322e */
@@ -205,11 +192,14 @@ body {
     content: "";
     position: absolute;
     z-index: -1;
-    left: 0;
-    right: 100%;
-    top: 62%;
+    left: -6px;
+    right: calc(100% + 6px);
+    /* top: 62%;
     background: #c0a380;
-    height: 4px;
+    height: 4px; */
+    top: 50%;
+    background: rgba(var(--text-color), 0.8);
+    height: 1px;
     -webkit-transition-property: right;
     transition-property: right;
     -webkit-transition-duration: 0.3s;
@@ -220,7 +210,7 @@ body {
 #nav ul li a:hover:before,
 #nav ul li a:focus:before,
 #nav ul li a:active:before {
-    right: 0;
+    right: -6px;
 }
 
 #nav ul li a:hover {
