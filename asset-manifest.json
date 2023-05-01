@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio_v2/static/css/main.449cdbec.css",
-    "main.js": "/portfolio_v2/static/js/main.29b79bf4.js",
+    "main.css": "/portfolio_v2/static/css/main.d680407a.css",
+    "main.js": "/portfolio_v2/static/js/main.3b045416.js",
     "static/js/787.d9a20797.chunk.js": "/portfolio_v2/static/js/787.d9a20797.chunk.js",
     "static/media/pohang-foreign-main.png": "/portfolio_v2/static/media/pohang-foreign-main.9cfecfdb32a717efe22f.png",
     "static/media/dtro01.png": "/portfolio_v2/static/media/dtro01.7e5969220161a7c748b9.png",
@@ -25,12 +25,12 @@
     "static/media/handong02.png": "/portfolio_v2/static/media/handong02.647085a7ec9aec774133.png",
     "static/media/handong_m.png": "/portfolio_v2/static/media/handong_m.5917ab7863ab108b3606.png",
     "index.html": "/portfolio_v2/index.html",
-    "main.449cdbec.css.map": "/portfolio_v2/static/css/main.449cdbec.css.map",
-    "main.29b79bf4.js.map": "/portfolio_v2/static/js/main.29b79bf4.js.map",
+    "main.d680407a.css.map": "/portfolio_v2/static/css/main.d680407a.css.map",
+    "main.3b045416.js.map": "/portfolio_v2/static/js/main.3b045416.js.map",
     "787.d9a20797.chunk.js.map": "/portfolio_v2/static/js/787.d9a20797.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.449cdbec.css",
-    "static/js/main.29b79bf4.js"
+    "static/css/main.d680407a.css",
+    "static/js/main.3b045416.js"
   ]
 }
