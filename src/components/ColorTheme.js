@@ -21,7 +21,6 @@ function ColorTheme() {
     return (
         <div className={`themeBtn ${theme}`}>
             <button onClick={toggleTheme}>
-                {/* It's a {theme === "light" ? "light theme" : "dark theme"}! */}
                 <span className="tooltip">{titleText}</span>
                 {theme === "light" ? (
                     <MaterialIcon icon="dark_mode" size={24} />

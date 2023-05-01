@@ -45,10 +45,12 @@ function App() {
                     <div className="inner">
                         <div className="header">
                             <div className="logo">
-                                <h1>
-                                    Cheonga
-                                    <br /> Yun
-                                </h1>
+                                <Link to={`/portfolio_v2/`}>
+                                    <h1>
+                                        Cheonga
+                                        <br /> Yun
+                                    </h1>
+                                </Link>
                             </div>
                             <ColorTheme />
                         </div>
@@ -83,12 +85,12 @@ function App() {
                         <Location />
                         <Sns />
                     </div>
-                    <div className="bg-wrap">
+                    {/* <div className="bg-wrap">
                         <span className="c1"></span>
                         <span className="c2"></span>
                         <span className="c3"></span>
                         <span className="c4"></span>
-                    </div>
+                    </div> */}
                 </div>
             )}
         </>

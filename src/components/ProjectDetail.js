@@ -1,13 +1,15 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+import { workLists } from "../constants/index";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { workLists } from "../constants/index";
 
-import { Pagination, Navigation } from "swiper";
+import MaterialIcon from "react-google-material-icons";
 
 function Detail() {
     const params = Number(Object.values(useParams()));
@@ -18,15 +20,13 @@ function Detail() {
         console.log(typeof params);
     }, [params]);
 
-    // const { content } = props.location.state;
-
-    // const cont = Object.keys(content).map((key) => [key, content[key]]);
-    // const cont = Object.entries(content);
     const Slider = ({ index, name, description, skill, image }) => {
         return (
-            <div variants={index} className="imgWrap">
-                <img src={image} alt="img" />
-                <div className="txtWrap">
+            <div variants={index} className="slide-item">
+                <div className="img-wrap">
+                    <img src={image} alt="img" />
+                </div>
+                <div className="txt-wrap">
                     <h3>{name}</h3>
                     <p>{description}</p>
                     <span>{skill}</span>
@@ -38,14 +38,16 @@ function Detail() {
     return (
         <div id="projectDetail" className="content">
             {/* <h1 className="content-title">Detail</h1> */}
-            <button
-                onClick={() => {
-                    navigate(-1);
-                }}
-                className="backBtn"
-            >
-                ◀ go back to Project List
-            </button>
+            <div className="backBtn">
+                <button
+                    onClick={() => {
+                        navigate(-1);
+                    }}
+                >
+                    <MaterialIcon icon="navigate_before" size={24} /> go back to
+                    Project List
+                </button>
+            </div>
             <div id="SwiperWrap">
                 <Swiper
                     slidesPerView={1}
