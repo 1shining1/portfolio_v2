@@ -5,7 +5,6 @@ import Home from "../components/Home";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import ProjectDetail from "../components/ProjectDetail";
-import TestProjects from "../components/Projects.test";
 
 import Contact from "../components/Contact";
 
@@ -22,11 +21,6 @@ const Location = () => {
                 <Route
                     path="/portfolio_v2/project_detail/:id/"
                     element={<ProjectDetail />}
-                ></Route>
-                {/* project list style test */}
-                <Route
-                    path="/portfolio_v2/test"
-                    element={<TestProjects />}
                 ></Route>
                 <Route
                     path="/portfolio_v2/contact"

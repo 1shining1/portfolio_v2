@@ -43,21 +43,6 @@ const workLists = [
                     "Mobile application and web pages for Handong Global University's attendance system",
                 image: handong01,
                 skill: "HTML /  CSS / JAVASCRIPT",
-                // skill: ["HTML", "CSS", "JavaScript"],
-                // tags: [
-                //     {
-                //         name: "HTML",
-                //         color: "blue-text-gradient",
-                //     },
-                //     {
-                //         name: "CSS",
-                //         color: "green-text-gradient",
-                //     },
-                //     {
-                //         name: "JavaScript",
-                //         color: "pink-text-gradient",
-                //     },
-                // ],
             },
             {
                 name: "content!!!!!",
@@ -104,7 +89,7 @@ const workLists = [
         ],
     },
     {
-        name: "Foreign language versions of Pohang City Hall",
+        name: "Foreign Language versions of Pohang City Hall",
         description:
             "Development and Maintenance of Responsive Website for Pohang City",
         image: pohangF01,
@@ -140,7 +125,7 @@ const workLists = [
         ],
     },
     {
-        name: "Affiliated organizations of the Pohang City Hall",
+        name: "Affiliated Organizations of the Pohang City Hall",
 
         image: Trauma,
         content: [

@@ -1,23 +1,31 @@
 import React from "react";
-import Lists from "../components/ProjectList";
+import List from "../components/ProjectList";
 
 import { workLists } from "../constants/index";
 
-const Projects = () => {
+const TestProjects = () => {
     return (
-        <div id="projects" className="content">
-            <h1 className="content-title">Projects</h1>
-            <div className="list">
-                {workLists.map((workList, index) => (
-                    <Lists
-                        key={`workList-${index}`}
-                        index={index}
-                        {...workList}
-                    />
-                ))}
+        <div id="project_list" className="content">
+            {/* <h1 className="content-title">Projects</h1> */}
+            <div className="list-wrap">
+                <div className="left">
+                    <p>
+                        Mobile applications,<span className="br"></span>{" "}
+                        Responsive Websites
+                    </p>
+                </div>
+                <div className="right">
+                    {workLists.map((workList, index) => (
+                        <List
+                            key={`workList-${index}`}
+                            index={index}
+                            {...workList}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
 };
 
-export default Projects;
+export default TestProjects;

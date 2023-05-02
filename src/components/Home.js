@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
     return (
         <div id="home" className="content">
-            <div className="txt-wrap">
+            <div className="inner">
                 <h2>Hi, I'm Cheonga.</h2>
                 <p>
                     <span class="first-letter">"I</span> am a Front-end

@@ -1,20 +1,25 @@
 import { Link } from "react-router-dom";
+import MaterialIcon from "react-google-material-icons";
 
-const Lists = ({ index, name, image }) => {
+const List = ({ index, name }) => {
     return (
-        // <div variants={index}>
-        <div className="listItem">
+        <div className="list-item">
             <Link
                 to={{
                     pathname: `/portfolio_v2/project_detail/${index}`,
                 }}
             >
-                <img src={image} alt="img" className="list_img" />
-                <span className="list_txt">READ MORE</span>
+                <span className="num">
+                    {(index + 1).toString().padStart(2, "0")}
+                </span>
+                <span className="title">
+                    {name}
+                    <MaterialIcon icon="south_east" />
+                </span>
             </Link>
-            <p className="list_title">{name}</p>
+            {/* <p className="info"></p> */}
         </div>
     );
 };
 
-export default Lists;
+export default List;

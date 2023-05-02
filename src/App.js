@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import MaterialIcon from "react-google-material-icons";
+
 import ColorTheme from "./components/ColorTheme";
 import Sns from "./components/Sns";
 
@@ -7,27 +9,26 @@ import Location from "./routes";
 
 function App() {
     const [loading, setLoading] = useState(true);
+    const [isOpen, setMenu] = useState(false); // 메뉴의 초기값을 false로 설정
+
+    const toggleMenu = () => {
+        setMenu((isOpen) => !isOpen); // on,off 개념 boolean
+    };
 
     useEffect(() => {
         function handleResize() {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty("--vh", `${vh}px`);
         }
-
-        // Add event listener on component mount
         window.addEventListener("resize", handleResize);
-
-        // Remove event listener on component unmount
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     useEffect(() => {
-        // Simulate a delay for demonstration purposes
         const delay = setTimeout(() => {
             setLoading(false);
         }, 2000);
 
-        // Clear the delay on unmount
         return () => clearTimeout(delay);
     }, []);
 
@@ -52,36 +53,72 @@ function App() {
                                     </h1>
                                 </Link>
                             </div>
+                            <div id="nav">
+                                <ul>
+                                    <li>
+                                        <Link to={`/portfolio_v2/`}>Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link to={`/portfolio_v2/about`}>
+                                            About
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to={`/portfolio_v2/projects`}>
+                                            Projects
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to={`/portfolio_v2/contact`}>
+                                            Contact
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
                             <ColorTheme />
+                            <button
+                                onClick={() => toggleMenu()}
+                                className="menu-btn"
+                            >
+                                <MaterialIcon icon="menu" />
+                            </button>
+                            <div
+                                className={`mobile-nav ${
+                                    isOpen ? "show-menu" : "hide-menu"
+                                }`}
+                            >
+                                <div className="menu-top">
+                                    <Sns />
+                                    <button
+                                        onClick={() => toggleMenu()}
+                                        className="close-btn"
+                                    >
+                                        <MaterialIcon icon="close" />
+                                    </button>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <Link to={`/portfolio_v2/`}>Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link to={`/portfolio_v2/about`}>
+                                            About
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to={`/portfolio_v2/projects`}>
+                                            Projects
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to={`/portfolio_v2/contact`}>
+                                            Contact
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <div id="nav">
-                            <ul>
-                                <li>
-                                    <Link to={`/portfolio_v2/`}>Home</Link>
-                                </li>
-                                <li>
-                                    <Link to={`/portfolio_v2/about`}>
-                                        About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to={`/portfolio_v2/projects`}>
-                                        Projects
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to={`/portfolio_v2/contact`}>
-                                        Contact
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to={`/portfolio_v2/test`}>
-                                        list test
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
                         <Location />
                         <Sns />
                     </div>
