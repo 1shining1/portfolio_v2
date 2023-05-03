@@ -5,27 +5,27 @@ const Sns = () => {
         <div className="snsIcons">
             <div className="inner">
                 <a
-                    href="test.html"
+                    href="https://github.com/1shining1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Github Page"
+                    title="Github Page(Opens in a new tab)"
                     className="github"
                 >
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
 
                 <a
-                    href="test.html"
+                    href="https://www.linkedin.com/in/shining-yun/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Linkedin Profile Page"
+                    title="Linkedin Profile Page(Opens in a new tab)"
                     className="linkedin"
                 >
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
 
                 <a
-                    href="test.html"
+                    href="mailto:shining2327@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Email to Cheonga"

@@ -44,8 +44,8 @@ function Detail() {
                         navigate(-1);
                     }}
                 >
-                    <MaterialIcon icon="navigate_before" size={24} /> go back to
-                    Project List
+                    <MaterialIcon icon="navigate_before" />{" "}
+                    <span>go back to Project List</span>
                 </button>
             </div>
             <div id="SwiperWrap">

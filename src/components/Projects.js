@@ -10,7 +10,7 @@ const TestProjects = () => {
             <div className="list-wrap">
                 <div className="left">
                     <p>
-                        Mobile applications,<span className="br"></span>{" "}
+                        Mobile Applications,<span className="br"></span>{" "}
                         Responsive Websites
                     </p>
                 </div>

@@ -9,10 +9,11 @@ import Location from "./routes";
 
 function App() {
     const [loading, setLoading] = useState(true);
-    const [isOpen, setMenu] = useState(false); // 메뉴의 초기값을 false로 설정
 
+    // mobile menu
+    const [isOpen, setMenu] = useState(false);
     const toggleMenu = () => {
-        setMenu((isOpen) => !isOpen); // on,off 개념 boolean
+        setMenu((isOpen) => !isOpen);
     };
 
     useEffect(() => {
@@ -122,12 +123,6 @@ function App() {
                         <Location />
                         <Sns />
                     </div>
-                    {/* <div className="bg-wrap">
-                        <span className="c1"></span>
-                        <span className="c2"></span>
-                        <span className="c3"></span>
-                        <span className="c4"></span>
-                    </div> */}
                 </div>
             )}
         </>
