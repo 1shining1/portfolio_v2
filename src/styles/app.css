@@ -91,37 +91,6 @@ body {
     background: rgb(var(--background-color));
 }
 
-.container::after {
-    content: "";
-    position: absolute;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(var(--background-color));
-    opacity: 1;
-    /* Boxes */
-    /* background-image: linear-gradient(
-            rgba(222, 202, 176, 0.3) 0.7000000000000001px,
-            transparent 0.7000000000000001px
-        ),
-        linear-gradient(
-            to right,
-            rgba(222, 202, 176, 0.3) 0.7000000000000001px,
-            rgb(var(--background-color)) 0.7000000000000001px
-        );
-    background-size: 30px 30px; */
-
-    /* radial */
-    /* background-image: radial-gradient(#9b8f80 0.75px, transparent 0.75px),
-        radial-gradient(#9b8f80 0.75px, rgb(var(--background-color)) 0.75px);
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px; */
-    border-radius: 0.5rem;
-    z-index: -1;
-}
-
 .container > .inner {
     width: 100%;
     height: 100%;
@@ -198,6 +167,18 @@ body {
 
 .mobile-nav {
     display: none;
+}
+
+.mobile-menu-bg {
+    display: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 90;
 }
 
 .menu-btn {
@@ -365,9 +346,7 @@ body {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
-        border-width: 2px 0 3px;
-        border-style: solid;
-        border-color: rgb(var(--text-color));
+        border-bottom: 1px solid rgba(var(--text-color), 0.5);
     }
 
     .mobile-nav .snsIcons {
@@ -380,11 +359,8 @@ body {
 
     .mobile-nav .snsIcons > .inner {
         flex-direction: row;
-        gap: 5px;
-    }
-
-    .mobile-nav .snsIcons a {
-        margin: 0 5px;
+        gap: 10px;
+        padding: 0 10px;
     }
 
     .mobile-nav .snsIcons ion-icon {
@@ -393,13 +369,23 @@ body {
 
     .mobile-nav ul li a {
         position: relative;
-        display: inline-block;
-        padding: 12px 0;
-        vertical-align: middle;
+        display: block;
+        padding: 12px 12px 12px 24px;
         color: rgb(var(--text-color));
         box-shadow: 0 0 1px rgba(0, 0, 0, 0);
         text-decoration: none;
         font-family: "Lora", serif;
+    }
+
+    .mobile-nav ul li a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 5px;
+        height: 2px;
+        background-color: rgba(var(--accent-color), 0.5);
     }
 }
 
