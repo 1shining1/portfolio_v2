@@ -18,14 +18,14 @@ function App() {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
-            document.querySelector(".mobile-menu-bg").style.display = "block";
+            // document.querySelector(".mobile-menu-bg").style.display = "block";
         } else {
             document.body.style.overflow = "";
-            document.querySelector(".mobile-menu-bg").style.display = "";
+            // document.querySelector(".mobile-menu-bg").style.display = "";
         }
         return () => {
             document.body.style.overflow = "";
-            document.querySelector(".mobile-menu-bg").style.display = "";
+            // document.querySelector(".mobile-menu-bg").style.display = "";
         };
     }, [isOpen]);
 
@@ -56,7 +56,7 @@ function App() {
                     </h1>
                 </div>
             ) : (
-                <div className="container">
+                <div className={`container ${isOpen ? "m-open" : "m-close"}`}>
                     <div className="inner">
                         <div className="header">
                             <div className="logo">

@@ -181,6 +181,10 @@ body {
     z-index: 90;
 }
 
+.m-open .mobile-menu-bg {
+    display: block;
+}
+
 .menu-btn {
     display: none;
 }
