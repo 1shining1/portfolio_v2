@@ -304,6 +304,7 @@ body {
     }
 
     .menu-btn i {
+        color: rgb(var(--text-color));
         font-size: 30px !important;
     }
 
@@ -325,6 +326,7 @@ body {
     }
 
     .mobile-nav .close-btn i {
+        color: rgb(var(--text-color));
         font-size: 30px !important;
     }
 
